@@ -1,0 +1,715 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="2"
+    android:orientation="vertical"
+    android:weightSum="1">
+    <LinearLayout
+        android:id="@+id/inicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Holo.ProgressBar"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_cargaDirecion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:text="Obteniendo direccion..."/>
+
+        <EditText
+            android:id="@+id/txtDireccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/mapwhere"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/inicio"
+        android:layout_weight="1">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@color/BLANCO" />
+    </FrameLayout>
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#004678"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".25">
+
+            <TextView
+                android:id="@+id/tv_ekg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="10dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tv_ekg2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/btn_ekg"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_map"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:drawableBottom="@drawable/ekg22"
+                android:layout_marginBottom="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".10">
+
+            <TextView
+                android:id="@+id/tv_mapa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:text="" />
+
+            <Button
+                android:id="@+id/btn_mapa"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_map"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:drawableBottom="@drawable/tensiometro"
+                android:layout_marginBottom="5dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".10">
+
+            <TextView
+                android:id="@+id/tv_holter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:text="" />
+
+            <Button
+                android:id="@+id/btn_holter"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:drawableBottom="@drawable/ecg22"
+                android:background="@drawable/btn_map" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".20">
+
+            <TextView
+                android:id="@+id/tv_espiro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_espiro2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/btn_espiro"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:drawableBottom="@drawable/pulmon2"
+                android:background="@drawable/btn_map" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".17">
+
+            <TextView
+                android:id="@+id/tv_fondoOjo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_fondoOjo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/btn_fondoOjo"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:drawableBottom="@drawable/aojo"
+                android:background="@drawable/btn_map" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".18">
+
+            <TextView
+                android:id="@+id/tv_teleconsulta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tv_teleconsulta2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/btn_teleconsulta"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_map"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:drawableLeft="@drawable/tlc2"
+                android:layout_marginBottom="5dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    -->
+    <LinearLayout
+        android:id="@+id/menu01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#004678"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".25">
+
+            <TextView
+                android:id="@+id/tv_ekg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="10dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tv_ekg2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/btn_ekg"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_map"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:drawableBottom="@drawable/ekg22"
+                android:layout_marginBottom="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".10">
+
+            <TextView
+                android:id="@+id/tv_mapa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:text="" />
+
+            <Button
+                android:id="@+id/btn_mapa"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_map"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:drawableBottom="@drawable/tensiometro"
+                android:layout_marginBottom="5dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".10">
+
+            <TextView
+                android:id="@+id/tv_holter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:text="" />
+
+            <Button
+                android:id="@+id/btn_holter"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:drawableBottom="@drawable/ecg22"
+                android:background="@drawable/btn_map" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".20">
+
+            <TextView
+                android:id="@+id/tv_espiro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_espiro2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/btn_espiro"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:drawableBottom="@drawable/pulmon2"
+                android:background="@drawable/btn_map" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".17">
+
+            <TextView
+                android:id="@+id/tv_fondoOjo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_fondoOjo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_fondoOjo"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:drawableBottom="@drawable/aojo"
+                android:background="@drawable/btn_map" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_header1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textAlignment="center" />
+
+
+            <TextView
+                android:id="@+id/siguiente"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:drawableBottom="@drawable/fright" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/menu02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#004678"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textAlignment="center" />
+
+
+
+            <TextView
+                android:id="@+id/anterior"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:drawableBottom="@drawable/fleft"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".10">
+
+            <TextView
+                android:id="@+id/tv_teleconsulta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="10dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:text="Electro" />
+
+            <TextView
+                android:id="@+id/tv_teleconsulta2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/btn_teleconsulta"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_map"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:drawableLeft="@drawable/tlc2"
+                android:layout_marginBottom="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".10">
+
+            <TextView
+                android:id="@+id/tv_lab1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_lab2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:text="" />
+
+            <Button
+                android:id="@+id/btn_domicilab"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_map"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:drawableBottom="@drawable/lab"
+                android:layout_marginBottom="5dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".10">
+
+            <TextView
+                android:id="@+id/tv_ray1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_ray2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:text="" />
+
+            <Button
+                android:id="@+id/btn_rayosx"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:drawableBottom="@drawable/ecg22"
+                android:background="@drawable/btn_map" />
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:id="@+id/btnSol_Service"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/map_marker"
+        android:visibility="gone"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn_service"
+        android:drawableRight="@drawable/foco"
+        android:textAllCaps="false"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btnSol_ServiceError"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/map_marker"
+        android:visibility="gone"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn_service"
+        android:drawableRight="@drawable/foco"
+        android:textAllCaps="false"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/QR_Image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name" />
+
+
+</RelativeLayout>

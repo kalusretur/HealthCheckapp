@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="itms.com.pe.app.confirmacion_servicio">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="#004678"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:textAlignment="center"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E0E0E0"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_text"
+                android:drawableRight="@drawable/downico2"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Seleccione un Paciente"
+                android:textColor="@color/NEGRO"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtEspecialidad"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_text"
+                android:drawableRight="@drawable/downico2"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Seleccione una Especialidad"
+                android:textColor="@color/NEGRO"
+                android:textSize="18dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/txtMotivo"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_text"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Orientación Diagnóstica"
+                android:textColor="@color/NEGRO"
+                android:textSize="18dp"
+                android:visibility="gone"/>
+
+
+            <TextView
+                android:id="@+id/txtPrecio"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_text"
+                android:gravity="center_vertical|center_horizontal"
+                android:text=""
+                android:textColor="@color/NEGRO"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtFormaPago"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_text"
+                android:drawableRight="@drawable/downico2"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Seleccione el método de Pago"
+                android:textColor="@color/NEGRO"
+                android:textSize="18dp" />
+
+            <Switch
+                android:id="@+id/switch_marcapaso"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_text"
+                android:gravity="center_vertical|center_horizontal"
+                android:showText="true"
+                android:text="¿Cuenta con Marcapasos?"
+                android:textColor="@color/ROJO"
+                android:textOff="No"
+                android:textOn="Sí"
+                android:textSize="16dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btn_confirmacion"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#D7D7D7"
+                android:textColor="@android:color/primary_text_dark_nodisable"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="Confirma tu Pedido" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

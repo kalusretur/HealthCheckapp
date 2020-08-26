@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_servicio"
+            android:icon="@drawable/ic_portafolio"
+            android:title="Servicios" />
+        <item
+            android:id="@+id/nav_pacientes"
+            android:icon="?android:attr/actionModePasteDrawable"
+            android:title="Pacientes" />
+        <item
+            android:id="@+id/nav_misAtenciones"
+            android:icon="?android:attr/actionModePasteDrawable"
+            android:title="Mis Atenciones" />
+
+        <item
+            android:id="@+id/nav_Medico"
+            android:icon="@android:drawable/ic_lock_power_off"
+            android:title="Mis Pacientes" />
+
+        <item
+            android:id="@+id/nav_salir"
+            android:icon="@android:drawable/ic_lock_power_off"
+            android:title="Salir" />
+
+
+    </group>
+
+    <!--
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+    -->
+
+</menu>

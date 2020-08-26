@@ -1,0 +1,197 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="itms.com.pe.app.fr_registro_pacientes">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/scrollView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="25dp">
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingrese los datos de un Paciente"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="30dp">
+
+                <Spinner
+                    android:id="@+id/sp_parentesco"
+                    android:layout_width="188dp"
+                    android:layout_height="34dp" />
+
+                <Spinner
+                    android:id="@+id/sp_genero"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_cellphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp">
+
+                <EditText
+                    android:id="@+id/txtNombreFpaci"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint=" Nombre"
+                    android:maxLength="99"
+                    android:drawableLeft="@drawable/person"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_password2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtApellidoFpaci_pat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint=" Apellido Paterno"
+                    android:drawableLeft="@drawable/person"
+                    android:inputType="textPersonName"
+                    android:maxLength="99"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_password23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtApellidoFpaci_mat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint=" Apellido Materno"
+                    android:drawableLeft="@drawable/person"
+                    android:inputType="textPersonName"
+                    android:maxLength="99"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_password3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtCelularFpaci"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/celphone"
+                        android:ems="10"
+                        android:hint=" Número de Celular"
+                        android:inputType="number"
+                        android:maxLength="9"
+                        android:textSize="14sp" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+                <EditText
+                    android:id="@+id/txtFecNac"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="11dp"
+                    android:layout_weight="0.50"
+                    android:drawableLeft="@drawable/calendar"
+                    android:focusable="false"
+                    android:hint=" Fecha de Nacimiento"
+                    android:inputType="date"
+                    android:padding="10dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layum_doc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/sp_tipdoc"
+                    android:layout_width="169dp"
+                    android:layout_height="match_parent"
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_tipDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtNumDocFpaci"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/card_doc"
+                        android:ems="10"
+                        android:hint=" Número de Documento"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:textSize="14sp" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnIngresarPaciente"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="35dp"
+                android:background="@color/material_blue_grey_950"
+                android:text="INGRESAR PACIENTE"
+                android:textColor="@android:color/primary_text_dark_nodisable" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

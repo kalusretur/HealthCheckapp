@@ -1,0 +1,448 @@
+<RelativeLayout android:id="@+id/confirm_address_map_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp">
+
+                <TextView
+                    android:id="@+id/txtGenerales"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/border_text"
+                    android:drawableRight="@drawable/downico2"
+                    android:gravity="center"
+                    android:text="Síntomas Generales" />
+
+                <LinearLayout
+                    android:id="@+id/layoutGenerales"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/checkBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fiebre" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Malestar general" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dolor de cabeza" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mareos" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nauseas" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Falta de apetito" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Zumbido en los oídos" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mucha sed" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtRespiratorios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border_text"
+                    android:drawableRight="@drawable/downico2"
+                    android:gravity="center"
+                    android:text="Problemas Respiratorios" />
+
+                <LinearLayout
+                    android:id="@+id/layoutRespiratorios"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingStart="15dp"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/checkBox9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dolor de garganta" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Congestión nasal" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tos" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Flema" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dolor de pecho" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dolor nasal y/o frontal" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Agitación (sensación de falta de aire)" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtDisgestivos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border_text"
+                    android:drawableRight="@drawable/downico2"
+                    android:gravity="center"
+                    android:text="Problemas Digestivos" />
+
+                <LinearLayout
+                    android:id="@+id/layoutDigestivos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/checkBox16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Diarreas" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Diarreas con sangre" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Diarreas con mucosidad" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dolor abdominal" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nauseas" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Vómitos" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Estreñimiento" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtMuscoesqueleticos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border_text"
+                    android:drawableRight="@drawable/downico2"
+                    android:gravity="center"
+                    android:text="Problemas Musculoesqueléticos " />
+
+                <LinearLayout
+                    android:id="@+id/layoutMusculoesqueleticos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/checkBox24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dolor de cuello" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dolor de espalda" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox26"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dolor de extremidades" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dolor por golpe" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtUrinarios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border_text"
+                    android:drawableRight="@drawable/downico2"
+                    android:gravity="center"
+                    android:text="Molestias Urinarias " />
+
+                <LinearLayout
+                    android:id="@+id/layoutUrinarios"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/checkBox28"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Aumento de la frecuencia" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox29"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dolor y/o ardor al orinar" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox30"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dolor en espalda baja " />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtPiel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border_text"
+                    android:drawableRight="@drawable/downico2"
+                    android:gravity="center"
+                    android:text="Problemas de la Piel " />
+
+                <LinearLayout
+                    android:id="@+id/layoutPiel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/checkBox31"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lesiones en la piel y/o Picadura de insecto" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox32"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hinchazón de alguna parte de la piel del cuerpo" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Enrojecimiento de la piel" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox34"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dolor debajo de la piel" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Calor en la piel" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox36"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Escozor" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtPresionArterial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border_text"
+                    android:drawableRight="@drawable/downico2"
+                    android:gravity="center"
+                    android:text="Problemas de la Presión Arterial " />
+
+                <LinearLayout
+                    android:id="@+id/layoutPresionArterial"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/checkBox37"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Se tomo la presión alta (mayor de 160)" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox38"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Se tomo la presión baja (menos de 90)" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtOtros"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border_text"
+                    android:drawableRight="@drawable/downico2"
+                    android:gravity="center"
+                    android:text="Otros" />
+
+                <LinearLayout
+                    android:id="@+id/layoutOtros"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/editText3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginEnd="35dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/border_editext"
+                        android:ems="10"
+                        android:inputType="textMultiLine" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

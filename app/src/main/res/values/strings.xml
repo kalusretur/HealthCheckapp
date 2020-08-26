@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">ITMSapp</string>
+    <string name="btnIngresar">INGRESAR</string>
+    <string name="chkRecordar">Recordar contraseña</string>
+    <string name="lblOlvidosuClave">¿Olvidastes tu clave?</string>
+    <string name="lblResgistro">¿No tienes cuenta aún? Crea una</string>
+    <string name="title_activity_menu_opciones">MenuOpciones</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!--Values ProgresBar - Descarga PDF -->
+    <string name="prg_pdf_title">Descargando</string>
+    <string name="prg_pdf_message">Cargando...</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string-array name="ParentescoFirst">
+        <item>Yo</item>
+    </string-array>
+
+    <string-array name="Parentesco">
+        <item>Parentesco</item>
+        <item>Pareja</item>
+        <item>Hijo(a)</item>
+        <item>Padre</item>
+        <item>Madre</item>
+    </string-array>
+
+    <string-array name="Genero">
+        <item>Genero</item>
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+
+    <string-array name="TipoDocumento">
+        <item>Tipo Documento</item>
+        <item>DNI</item>
+        <item>Pasaporte</item>
+        <item>Carnet de Extranjeria</item>
+    </string-array>
+
+    <string-array name="anhoPasarella">
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+    </string-array>
+
+    <string-array name="mesPsarella">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+
+
+    </string-array>
+
+</resources>
+
